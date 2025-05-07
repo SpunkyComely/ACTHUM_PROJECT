@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Snake Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #f0f0f0;
+    }
+
+    header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+    .animal {
+      display: flex;
+      flex-direction: column;
+      border: 0.5cm solid #000000;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .animal-section {
+      margin-bottom: 60px;
+    }
+
+    .animal-section img {
+      max-width: 400px;
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    footer nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    footer nav ul li a:hover {
+      color: #aaa;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+    <h1>Animal Dictionary</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+            <div class="animal-section">
+            <img src="https://www.hummingbirdsplus.org/news-center/wp-content/uploads/2023/09/Penguin.jpg" 
+            alt="Penguin"onclick="enlargeImage(this)">
+            <h2>Penguin</h2>
+            <div id="penguin">
+            <p>
+                Penguins are flightless birds that primarily inhabit the Southern Hemisphere, with a notable concentration in Antarctica. 
+                They are uniquely adapted to aquatic life, possessing flipper-like wings for swimming and dense, waterproof plumage for insulation. 
+                These social creatures form large colonies for breeding and warmth, often engaging in elaborate courtship rituals. 
+                Penguins primarily consume krill, fish, and squid, diving deep into the ocean to hunt.
+                They exhibit remarkable resilience in harsh climates, employing strategies like huddling to conserve body heat. 
+                Penguin parents share the responsibilities of incubating eggs and raising chicks, displaying strong parental bonds. 
+                Various species of penguins exist, ranging in size from the small fairy penguin to the large emperor penguin.</p>
+            </div>
+        </div>
+
+        <div class="animal-section">
+            <img src="https://fthmb.tqn.com/7cd9Q3LSapEShHq2mKvQgSPr_tc=/2250x1500/filters:fill(auto,1)/149267744-56a008755f9b58eba4ae8f46.jpg" 
+            alt=""onclick="enlargeImage(this)">
+            <h3>Habitat</h3>
+            <p>
+                Penguins primarily inhabit the Southern Hemisphere, with a strong preference for cold, coastal regions. 
+                Their habitats range from the icy expanses of Antarctica to the warmer shores of South Africa and South America. 
+                Many species thrive on pack ice, using it as a platform for breeding and molting. 
+                Some penguins are found in temperate climates, favoring rocky coastlines and islands.
+                Several species dig burrows or build nests from pebbles and guano for shelter and raising their chicks. 
+                Coastal waters rich in krill, fish, and squid are essential for their survival, providing their primary food sources. 
+                Climate change poses a significant threat to their habitats, especially those dependent on stable ice conditions.</p>
+            </div>
+           
+            <br><br>
+            <div class="animal-section">
+            <img src="https://www.thespruce.com/thmb/ZhaUs12wZsOnu60klxhG_3qoRhs=/2121x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-697353429-5c7e74f046e0fb000140a4dd.jpg" 
+            alt="Diet" onclick="enlargeImage(this)"> 
+            <h3>Diet</h3>
+            <p>
+                Penguin diets vary significantly depending on the species and their habitat. Primarily carnivores, penguins feed on a range of marine life. 
+                Krill, small crustaceans, form a staple part of many penguin diets, especially for Antarctic species. 
+                Fish, such as anchovies and sardines, are also a crucial food source for many populations.
+                Squid and other cephalopods are hunted by deeper-diving penguins. Some species supplement their diets with other marine invertebrates. 
+                Penguins obtain all their food by swimming and diving in the ocean.</p>
+            </div>
+            
+            <br><br><br><br>
+            <div class="animal-section">
+            <img src="https://www.hummingbirdsplus.org/nature-blog-network/wp-content/uploads/2023/08/penguins-social-behavior-and-survival-focus-1.jpg" 
+            alt="Social Behavior" onclick="enlargeImage(this)">
+            <h3>Social Behavior</h3>
+            <p>
+                Penguins exhibit complex social behaviors, often living in large colonies for breeding and protection. 
+                They engage in elaborate courtship rituals, including vocalizations and physical displays, to attract mates. 
+                Many species form monogamous pair bonds, sharing parental duties such as incubating eggs and raising chicks. 
+                Penguin colonies create a sense of community, with individuals often huddling together for warmth in harsh climates.
+                They use distinct vocalizations to recognize their partners and offspring within the bustling colony. Social grooming, 
+                or preening, strengthens bonds and maintains feather health. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<footer>
+    <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+</footer>
+
+<script>
+    function enlargeImage(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

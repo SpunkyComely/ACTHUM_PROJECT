@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lion Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="csscontacts.css">
+
+</head>
+<body>
+
+  <header>
+    <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+    <h1>Animal Dictionary</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <br>
+  <div class="animal">
+
+    <div class="animal-section">
+      <img src="https://wallup.net/wp-content/uploads/2016/01/186050-lion-animals.jpg" alt="Lion" onclick="enlargeImage(this)">
+      <h2>Lion</h2>
+      <p>
+        Lions, scientifically known as Panthera leo, are large, powerful cats primarily found in Africa and parts of India.
+        They are unique among cats for their social structure, living in groups called prides, which consist of related females, their cubs,
+        and a few adult males. Male lions are easily recognized by their prominent manes, which vary in color and size.
+        As apex predators, lions primarily hunt large ungulates like zebras, wildebeest, and buffalo.
+        They are primarily nocturnal, with females typically doing the hunting while males defend the territory.
+        Lion populations have been declining due to habitat loss and human-wildlife conflict, leading to their classification as a vulnerable species.
+        
+      </p>
+    </div>
+
+    <div class="animal-section">
+      <img src="https://www.shadowsofafrica.com/travel-africa/wp-content/uploads/2019/07/shutterstock_413856229.jpg" alt="Habitat" onclick="enlargeImage(this)">
+      <h3>Habitat</h3>
+      <p>
+        Lions primarily inhabit savannas and grasslands, open landscapes that provide ample prey and cover.
+        These majestic cats are also adaptable, extending their range into dry woodlands and scrublands.
+        While they thrive in these diverse environments, they are notably absent from dense forests and rainforests.
+        Their habitat selection is strongly influenced by the availability of prey.
+        The presence of water sources is also crucial, particularly during dry seasons.
+        Lions often establish their territories around these vital resources.
+      </p>
+    </div>
+
+    <div class="animal-section">
+      <img src="https://i.pinimg.com/736x/e7/e7/bc/e7e7bcafe2947e10671130c669649954.jpg" alt="Diet" onclick="enlargeImage(this)">
+      <h3>Diet</h3>
+      <p>
+        Lions are obligate carnivores, meaning their diet consists solely of meat.
+        Primarily, they hunt large ungulates like zebras, wildebeest, and buffalo.
+        They are opportunistic hunters, also preying on smaller animals when available.
+        Lions will scavenge carcasses found in their territory, supplementing their hunting efforts.
+        A single adult male lion can consume up to 40kg (88 lbs) of meat in one sitting.
+        On average, a female lion requires about 5kg (11 lbs) of meat per day.
+      </p>
+    </div>
+
+    <div class="animal-section">
+      <img src="https://www.thoughtco.com/thmb/JGJTYOqrAqTk8Rrk462G53ZbY-g=/2120x1417/filters:fill(auto,1)/200215202-001-56a006645f9b58eba4ae8b8d.jpg" alt="Social Behavior" onclick="enlargeImage(this)">
+      <h3>Social Behavior</h3>
+      <p>
+        Lions are highly social animals, living in groups called prides.
+        These prides typically consist of related females, their cubs, and a few adult males.
+        Female lions form the core of the pride, engaging in cooperative hunting and raising cubs together.
+        Male lions primarily defend the pride's territory.
+        Social grooming is common, strengthening bonds.
+        Communication involves a range of vocalizations, including roars, grunts, and meows.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Article.html">Articles</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function enlargeImage(img) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      var modal = document.getElementById("imageModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>

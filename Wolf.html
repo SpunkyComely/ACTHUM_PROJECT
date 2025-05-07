@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wolf Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="csswolf.css">
+
+</head>
+<body>
+
+    <header>
+        <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+        <h1>Animal Dictionary</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+
+            <div class="animal-section">
+                <img src="http://media.npr.org/assets/img/2012/02/10/gray-wolf_custom-c74539120c682b82e0656731493e495aaa40c613-s6-c30.jpg" 
+                alt="Wolf" onclick="enlargeImage(this)">
+                <h2>Wolf</h2>
+                <div id="wolf-details">
+                    <p>
+                        Wolves, scientifically known as Canis lupus, are highly social mammals that live in packs with complex hierarchies. 
+                        These apex predators play a crucial role in regulating ecosystems by controlling prey populations. 
+                        Their diet primarily consists of large ungulates like deer, elk, and moose. Wolves communicate through a variety of vocalizations, 
+                        including howls, barks, and growls, which serve to maintain pack cohesion and territory. 
+                        Once nearly extinct in many regions due to human persecution, conservation efforts have led to their successful reintroduction. 
+                        They are known for their strong family bonds and cooperative hunting strategies, thriving in diverse habitats from forests and mountains to tundra and grasslands.
+                    </p>
+                </div>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://static01.nyt.com/images/2020/10/29/climate/29CLI-WOLVES1/29CLI-WOLVES1-videoSixteenByNine3000.jpg" 
+                alt="Habitat" onclick="enlargeImage(this)">
+                <h3>Habitat</h3>
+                <div id="habitat-details">
+                    <p>
+                        Wolves are highly adaptable and inhabit a wide range of environments, from the Arctic tundra to forests, mountains, and grasslands. 
+                        Their primary habitat requirement is sufficient prey and suitable denning sites. Wolves prefer areas with minimal human disturbance, 
+                        allowing for successful hunting and breeding. In forested regions, they utilize dense undergrowth for cover and hunting.
+                        In mountainous areas, they follow elevation changes to track prey. On tundra, wolves adapt to harsh conditions, hunting caribou and muskoxen. 
+                        In grasslands, they target bison and other large herbivores.
+                    </p>
+                </div>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://animalvivid.com/wp-content/uploads/2023/02/Gray-Wolf-Eating-Meat-in-Forest.jpg" 
+                alt="Diet" onclick="enlargeImage(this)">
+                <h3>Diet</h3>
+                <div id="diet-details">
+                    <p>
+                        Wolves are primarily carnivores. Their main prey includes large ungulates like deer, elk, moose, and caribou. 
+                        Smaller mammals such as rabbits, rodents, and beavers also supplement their diet. Wolves are opportunistic feeders, 
+                        occasionally consuming birds, fish, or even insects. When large prey is scarce, they may scavenge carrion.
+                        Wolves can eat up to 20 pounds of food at once after a successful hunt, allowing them to endure long gaps between meals.
+                    </p>
+                </div>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://i.pinimg.com/originals/e1/ba/9e/e1ba9e100c670e175f55d9f4b6297ad8.jpg" 
+                alt="Social Behavior" onclick="enlargeImage(this)">
+                <h3>Social Behavior</h3>
+                <div id="social-behavior-details">
+                    <p>
+                        Wolves are highly social animals, living in structured packs typically led by a dominant breeding pair. 
+                        Pack cohesion is maintained through complex communication, including howls and body language. 
+                        Within the pack, wolves cooperate in hunting, raising pups, and defending their territory. 
+                        Pups are nurtured by all pack members, reinforcing social bonds. 
+                        Social hierarchy is maintained through displays of dominance and submission, minimizing conflict. 
+                        Wolves often stay with their birth pack for extended periods, strengthening familial ties and cooperative survival.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function enlargeImage(img) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

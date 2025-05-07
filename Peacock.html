@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Snake Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #f0f0f0;
+    }
+
+    header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+    .animal {
+      display: flex;
+      flex-direction: column;
+      border: 0.5cm solid #000000;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .animal-section {
+      margin-bottom: 60px;
+    }
+
+    .animal-section img {
+      max-width: 400px;
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    footer nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    footer nav ul li a:hover {
+      color: #aaa;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+    <h1>Animal Dictionary</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+            <div class="animal-section">
+            <img src="https://www.farmanimalreport.com/wp-content/uploads/2023/12/peacock-courtship-rituals.jpg" 
+            alt="Peacock"onclick="enlargeImage(this)">
+            <h2>Peacock</h2>
+            <div id="peacock-details">
+            <p>
+                The peacock, known for its stunningly vibrant plumage, is the male of the peafowl species, with the female being called a peahen. 
+                Its most famous feature is the large, iridescent tail feathers that fan out in a striking display during courtship rituals. 
+                These feathers are adorned with eye-like patterns, which the peacock uses to attract mates. 
+                Peafowls are omnivores, feeding on a variety of plants, insects, and small animals in their native habitats.
+                While peacocks are native to South Asia, they have been introduced to other regions, including parts of Africa and Europe. 
+                </p>
+            </div>
+        </div>
+
+        <div class="animal-section">
+            <img src="http://howtodoright.com/wp-content/uploads/2017/07/peacock-in-garden.jpg" 
+            alt=""onclick="enlargeImage(this)">
+            <h3>Habitat</h3>
+            <p>
+                Peacocks are native to the Indian subcontinent, primarily found in India, Sri Lanka, and parts of Southeast Asia. 
+                They thrive in a variety of habitats, including forests, grasslands, and agricultural areas. 
+                Typically, they prefer open woodlands with a mix of dense vegetation and open spaces for foraging. 
+                Peafowls are often found near water sources such as rivers, ponds, and lakes, as they require access to water for drinking and bathing.
+                They build their nests on the ground, usually in tall grass or shrubs, where they are sheltered from predators. 
+                During the breeding season, male peacocks perform elaborate displays in open areas to attract mates. 
+                </p>
+            </div>
+           <br>
+            <div class="animal-section">
+            <img src="https://learnpoultry.com/wp-content/uploads/2022/11/peacocks-eat-fruits-768x480.jpg" 
+            alt="Diet" onclick="enlargeImage(this)"> 
+            <h3>Diet</h3>
+            <p>
+                Peacocks are omnivorous, meaning their diet consists of both plant-based and animal-based foods. 
+                They primarily feed on seeds, fruits, berries, and leaves, foraging on the ground in their natural habitats. 
+                In addition to vegetation, peafowls also consume small insects, insects larvae, and even small reptiles, which provide them with essential proteins. 
+                Peafowls are known to eat agricultural crops, occasionally becoming pests in fields of rice, grains, or vegetables.
+                Their diet varies depending on the season, as they adapt to the availability of different food sources. 
+                Peacocks have strong beaks that help them pick through the ground to find food, and they are skilled at scratching the earth to uncover hidden items. 
+                While they typically forage during the day, peafowls often drink water from nearby streams, ponds, or other fresh water sources to stay hydrated.</p>
+            </div>
+            
+            <div class="animal-section">
+            <img src="https://i0.wp.com/animalbehaviorcorner.com/wp-content/uploads/2022/10/Peacock-Behavior-3-1.jpg?w=1200&ssl=1" 
+            alt="Social Behavior" onclick="enlargeImage(this)">
+            <h3>Social Behavior</h3>
+            <p>
+                Peacocks are generally social birds, often found in small groups called parties, especially outside of the breeding season. 
+                Males tend to form loose groups while the females usually stay in smaller family units. 
+                During mating season, the peacock's social behavior becomes more focused on courtship displays, 
+                where males perform their extravagant tail-fanning rituals to attract peahens.
+                These displays are a key part of their social interactions, with the male often calling loudly to signal his presence. 
+                Peafowls are also known to have a strict social hierarchy, where dominant males usually get the most attention from females. 
+                 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<footer>
+    <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+</footer>
+
+<script>
+    function enlargeImage(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

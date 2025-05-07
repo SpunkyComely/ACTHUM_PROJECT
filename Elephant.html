@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elephant Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+        .animal {
+            display: flex; 
+            flex-direction: column;
+            border: 0.5cm solid #000000;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .animal-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .animal-section {
+            margin-bottom: 60px;
+        }
+
+        .animal-section img {
+            max-width: 400px;
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        h2, h3 {
+            margin-top: 0;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        footer nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #aaa;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+        <h1>Animal Dictionary</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+
+            <div class="animal-section">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Awesome-Elephant-Photos.jpg" 
+                alt="Elephant" onclick="enlargeImage(this)">
+                <h2>Elephant</h2>
+                <p>
+                    Elephants are the largest land animals on Earth, known for their distinctive long trunks used for grasping and communication. 
+                    They are highly social creatures, living in complex family groups led by matriarchs. Elephants exhibit remarkable intelligence, 
+                    displaying behaviors like tool use and self-awareness. These herbivores consume vast amounts of vegetation daily, 
+                    playing a crucial role in shaping their ecosystems. Their ivory tusks, unfortunately, make them targets for poaching, 
+                    threatening their populations.
+                </p>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://www.elephant-world.com/wp-content/uploads/alex-ijnw4eIUras-unsplash-scaled.jpg" 
+                alt="Habitat" onclick="enlargeImage(this)">
+                <h3>Habitat</h3>
+                <p>
+                    Elephants inhabit a diverse range of environments across Africa and Asia. In Africa, they primarily reside in savannas, grasslands, 
+                    and woodlands, often near water sources. Asian elephants favor forested areas, including tropical rainforests and deciduous forests. 
+                    Seasonal changes and human encroachment influence elephant distribution, leading to migrations in search of food and water.
+                </p>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/93794d828a91f30a5764cbd42a22eb91.jpg" 
+                alt="Diet" onclick="enlargeImage(this)">
+                <h3>Diet</h3>
+                <p>
+                    Elephants are herbivores, consuming a wide variety of plant matter. Their diet primarily consists of grasses, leaves, fruits, and bark. 
+                    Adult elephants can eat up to 300 pounds of food per day. They also consume minerals found in soil and salt licks, 
+                    and require large amounts of water daily — often up to 50 gallons.
+                </p>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://animalresearcher.com/wp-content/uploads/2024/11/elephant_social_behavior_analysis.jpg" 
+                alt="Social Behavior" onclick="enlargeImage(this)">
+                <h3>Social Behavior</h3>
+                <p>
+                    Elephant social behavior is deeply complex and centered around strong family bonds. Matriarchs, the oldest and wisest females, 
+                    lead family groups and guide them to resources. Elephants show profound empathy, comfort the distressed, and grieve their dead. 
+                    They use vocalizations, touch, and even ground vibrations to communicate.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function enlargeImage(img) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

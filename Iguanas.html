@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Snake Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #f0f0f0;
+    }
+
+    header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+    .animal {
+      display: flex;
+      flex-direction: column;
+      border: 0.5cm solid #000000;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .animal-section {
+      margin-bottom: 60px;
+    }
+
+    .animal-section img {
+      max-width: 400px;
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    footer nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    footer nav ul li a:hover {
+      color: #aaa;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+    <h1>Animal Dictionary</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+            <div class="animal-section">
+            <img src="https://a-z-animals.com/media/2019/11/Iguana-Green.jpg" alt="Iguana"onclick="enlargeImage(this)">
+            <h2>Iguana</h2>
+            <p>
+                Iguanas are large, herbivorous lizards native to Central and South America, with some species also found in the Caribbean. 
+                They are known for their long tails, sharp claws, and distinctive crests along their backs and heads. 
+                Iguanas are primarily plant-eaters, feeding on leaves, flowers, fruits, and vegetables, although they may occasionally eat insects. 
+                They are excellent climbers and spend much of their time in trees, where they seek safety and warmth from the sun.
+                Iguanas are cold-blooded reptiles, meaning they rely on external heat sources to regulate their body temperature. 
+            
+                </p>
+            </div>
+        </div>
+
+        <div class="animal-section">
+            <img src="https://worldanimalfoundation.org/wp-content/uploads/2022/10/Iguana-Can-They-Be-Kept-As-Pets.jpg" alt=""onclick="enlargeImage(this)">
+            <h3>Habitat</h3>
+            <p>
+                Iguanas are primarily found in tropical and subtropical regions of Central and South America, as well as some Caribbean islands. They thrive in warm environments, often inhabiting forests, rainforests, and coastal areas, where they have access to both food and shelter. Many iguana species prefer areas with abundant vegetation, as their herbivorous diet relies on leaves, fruits, and flowers. 
+                They are also commonly found in rocky hillsides or along riverbanks, where they can easily climb trees or bask in the sun. Iguanas are arboreal, meaning they spend a significant amount of time in trees, but they also seek refuge in burrows or crevices to hide from predators. Coastal iguanas, such as the marine iguana, are adapted to life near the sea and can even swim in the ocean to forage for food. </p>
+            </div>
+           
+            <div class="animal-section">
+            <img src="https://reptilefriend.com/wp-content/uploads/2023/12/nutritional-deficiencies-in-iguanas-1024x585.jpg" 
+            alt="Diet" onclick="enlargeImage(this)"> 
+            <h3>Diet</h3>
+            <p>
+                Iguanas are herbivores, primarily feeding on a variety of plant material such as leaves, flowers, fruits, and vegetables. Their diet consists mostly of leafy greens like collard greens, dandelion greens, and hibiscus leaves, which provide essential nutrients. They also consume fruits like mangoes, bananas, and papayas, along with some types of flowers, including jasmine and orchids.
+                While iguanas mainly eat plant matter, they occasionally nibble on tender plant stems or vines. Because they are cold-blooded, iguanas rely on a nutrient-rich diet to maintain their energy and body function.  </p>
+            </div>
+            
+            <div class="animal-section">
+            <img src="https://iguanacontrol.com/wp-content/uploads/2024/02/common-iguana-behavior.jpg" 
+            alt="Social Behavior" onclick="enlargeImage(this)">
+            <h3>Social Behavior</h3>
+            <p>
+                Iguanas are generally solitary animals, especially when it comes to adults, who prefer to live alone and establish their own territories. They are most social during mating season, when males may compete for the attention of females, often engaging in displays of dominance. Male iguanas may puff out their throats, bob their heads, or make hissing sounds to assert their dominance or warn other males away. 
+                Juvenile iguanas, on the other hand, may tolerate living in loose groups, especially in areas with abundant food and shelter. While they are not highly social, iguanas do communicate with one another through body language, such as tail flicking or changes in posture. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<footer>
+    <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+</footer>
+
+<script>
+    function enlargeImage(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

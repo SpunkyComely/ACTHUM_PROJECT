@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elephant Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+        .animal {
+            display: flex; 
+            flex-direction: column;
+            border: 0.5cm solid #000000;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .animal-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .animal-section {
+            margin-bottom: 60px;
+        }
+
+        .animal-section img {
+            max-width: 400px;
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        h2, h3 {
+            margin-top: 0;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        footer nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #aaa;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+        <h1>Animal Dictionary</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+
+            <div class="animal-section">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Ant_on_leaf.jpg" 
+                alt="Ant" onclick="enlargeImage(this)">
+                <h2>Ant</h2>
+                <p>
+                    Ants are small, social insects that live in colonies, often consisting of thousands of individuals. Each colony has a queen ant, worker ants, and sometimes male ants for reproduction. They communicate using chemicals called pheromones to signal danger, food, or directions. Ants are known for their strength, teamwork, and ability to carry objects many times their own body weight. They play important roles in nature by aerating soil and cleaning up dead organisms and food scraps.
+                </p>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://www.treehugger.com/thmb/ju9tEk0ZnD49qUMzglOgCv3lw6I=/3073x2042/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-930526184-4f9503e4f1c247edb3a1a617b5db77d5.jpg" 
+                alt="Habitat" onclick="enlargeImage(this)">
+                <h3>Habitat</h3>
+                <p>
+                    Ants live in a wide variety of habitats, including forests, deserts, grasslands, and urban areas. They typically build nests underground, in wood, or inside plant stems. Some ants create complex colonies with tunnels and chambers that house thousands of individuals. Their nests provide shelter, a place to raise their young, and storage for food. Ants adapt well to their surroundings and are found on every continent except Antarctica.
+                </p>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://lirp.cdn-website.com/e15ed933/dms3rep/multi/opt/what-do-ants-eat-1920w.png" 
+                alt="Diet" onclick="enlargeImage(this)">
+                <h3>Diet</h3>
+                <p>
+                    Ants are omnivorous and have a varied diet depending on their species. They commonly eat sugary substances like nectar, honeydew from aphids, and fruits. Many ants also consume proteins from dead insects, small animals, or scavenged meat. Some ant species, like leafcutter ants, cultivate fungi by feeding it with chewed-up leaves, which they then eat. Ants are also known to forage for food in human environments, attracted to crumbs and sweet spills.
+                </p>
+            </div>
+
+            <div class="animal-section">
+                <img src="https://www.thoughtco.com/thmb/XPFFKm2BVEgNOcoBbx58gGhkcyU=/2128x1409/filters:fill(auto,1)/GettyImages-200494870-001-57673f415f9b58346a12c27a.jpg" 
+                alt="Social Behavior" onclick="enlargeImage(this)">
+                <h3>Social Behavior</h3>
+                <p>
+                    Ants have a highly organized social structure, living in colonies that can range from a few dozen to millions of individuals. Each ant has a specific role, such as worker, soldier, or queen, contributing to the survival and efficiency of the colony. They communicate using pheromones, sounds, and touch to coordinate activities like foraging and defense. Ants work together to build complex nests, care for their young, and gather food. Their cooperative behavior and division of labor make them one of the most successful social insects in the animal kingdom.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function enlargeImage(img) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

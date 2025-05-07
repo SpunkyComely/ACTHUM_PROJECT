@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="csslogin.css">
+  
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div class="form-container" id="login-form-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button type="submit">Log In</button>
+        <p id="login-error-message" class="error-message"></p>
+      </form>
+      <p class="form-switch">Don't have an account? <a href="#" id="show-register-form">Sign up</a></p>
+    </div>
+
+    <!-- Register Form -->
+    <div class="form-container" id="register-form-container" style="display: none;">
+      <h2>Sign Up</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="register-name">Full Name</label>
+          <input type="text" id="register-name" required />
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" required />
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" required />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required />
+        </div>
+        <button type="submit">Register</button>
+        <p id="register-error-message" class="error-message"></p>
+      </form>
+      <p class="form-switch">Already have an account? <a href="#" id="show-login-form">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const loginContainer = document.getElementById('login-form-container');
+    const registerContainer = document.getElementById('register-form-container');
+
+    document.getElementById('show-register-form').onclick = (e) => {
+      e.preventDefault();
+      loginContainer.style.display = 'none';
+      registerContainer.style.display = 'block';
+    };
+
+    document.getElementById('show-login-form').onclick = (e) => {
+      e.preventDefault();
+      registerContainer.style.display = 'none';
+      loginContainer.style.display = 'block';
+    };
+
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('register-name').value.trim();
+      const email = document.getElementById('register-email').value.trim();
+      const password = document.getElementById('register-password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const error = document.getElementById('register-error-message');
+
+      if (password !== confirmPassword) {
+        error.textContent = 'Passwords do not match.';
+        return;
+      }
+
+      if (localStorage.getItem(email)) {
+        error.textContent = 'User already exists.';
+        return;
+      }
+
+      localStorage.setItem(email, JSON.stringify({ name, password }));
+      error.style.color = 'green';
+      error.textContent = 'Registration successful. Redirecting...';
+      setTimeout(() => {
+        loginContainer.style.display = 'block';
+        registerContainer.style.display = 'none';
+        error.textContent = '';
+      }, 2000);
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value;
+      const error = document.getElementById('login-error-message');
+
+      const user = JSON.parse(localStorage.getItem(email));
+      if (!user) {
+        error.textContent = 'User not found.';
+        return;
+      }
+
+      if (user.password !== password) {
+        error.textContent = 'Incorrect password.';
+        return;
+      }
+
+      error.style.color = 'green';
+      error.textContent = 'Login successful. Redirecting...';
+      setTimeout(() => {
+        window.location.href = 'Index.html';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

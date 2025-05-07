@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffcc00;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #e6b800;
+        }
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #b19cd9;
+            text-decoration: none;
+        }
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+        #loginMessage {
+            margin-top: 10px;
+            text-align: center;
+            color: red; /* Default color for error messages */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Sign In</h1>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <div id="loginMessage"></div> <!-- Message container for login feedback -->
+        <a href="sign-up.html">Don't have an account? Sign Up</a>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const loginMessageDiv = document.getElementById('loginMessage');
+
+            console.log('Attempting login with email:', email);
+
+            // Retrieve user data
+            const userData = JSON.parse(localStorage.getItem(email));
+
+            if (!userData) {
+                loginMessageDiv.textContent = 'User not found';
+                console.log('User not found in localStorage');
+                return;
+            }
+
+            if (userData.password !== password) {
+                loginMessageDiv.textContent = 'Incorrect password';
+                console.log('Incorrect password');
+                return;
+            }
+
+            loginMessageDiv.style.color = 'green';
+            loginMessageDiv.textContent = 'Login successful';
+            console.log('Login successful');
+            setTimeout(() => {
+                window.location.href = 'Index.html'; // Redirect to the next page
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

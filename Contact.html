@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      margin-bottom: 0.5cm;
+      font-size: 1cm;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: black;
+    }
+
+    header nav ul li {
+      margin-right: 20px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #f0f0f0;
+    }
+
+    header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 1cm auto;
+      border-radius: 50%;
+      height: 100px;
+    }
+
+    .main-title {
+      color: #ffffff;
+      margin-top: 1cm;
+      text-align: center;
+    }
+
+    .social-links-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 100%;
+    }
+
+    .social-links li {
+      width: 300px;
+      text-align: center;
+      list-style: none;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    /* Updated this section to ensure all images are the same size */
+    .social-links li a img.main {
+      border-radius: 20px;
+      width: 300px; /* Fixed width */
+      height: 300px; /* Fixed height */
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links li a img.main:hover {
+      transform: scale(1.05);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+
+    .social-links li span {
+      display: block;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 1.1em;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 1000px) {
+      .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .social-links li {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .social-links li a img.main {
+        width: 100%; /* Makes the images scale to container width on smaller screens */
+        height: auto; /* Maintains aspect ratio */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .social-links li {
+        width: 100%;
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+      }
+
+      .social-links li span {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+    <h1>My Social Links</h1>
+    <nav>
+      <ul>
+          <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+          <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <h1 class="main-title">Stay Connected!</h1>
+
+  <div class="social-links-container">
+    <ul class="row social-links">
+      <li>
+        <a href="https://www.instagram.com/nash_cgd?igsh=N2t2czJ4cjk3aXVt">
+          <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351352.webp" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351352.webp" class="main" />
+        </a>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.eITlf6I46IXgP70oVQn4NQHaHa&pid=Api&P=0&h=180" class="icon" alt="Instagram Icon" />
+        <span>You can see my other posts here, contents like video's and photo's!</span>
+      </li>
+
+      <li>
+        <a href="https://m.me/carlo.dugyawe/">
+          <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351364.jpeg" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351364.jpeg" class="main" />
+        </a>
+        <img src="https://static.vecteezy.com/system/resources/previews/012/660/850/original/messenger-logo-on-transparent-isolated-background-free-vector.jpg" class="icon" alt="Messenger Icon" />
+        <span>You can contact me here, chat, and do business if you are down!</span>
+      </li>
+
+      <li>
+        <a href="https://www.tiktok.com/@cartuner?_t=ZS-8tlllRHQDTK%_r=1">
+          <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351337.jpg" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351337.jpg" class="main" />
+        </a>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.vBxd--hsylUJiybD3ymzyQHaHa&pid=Api&P=0&h=180" class="icon" alt="TikTok Icon" />
+        <span>You can visit my TikTok here and see some of my post that I uploaded!</span>
+      </li>
+    </ul>
+
+    <ul class="row social-links">
+      <li>
+        <a href="https://www.facebook.com/share/18sJYXH1oz">
+          <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351364.jpeg" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351364.jpeg" class="main" />
+        </a>
+        <img src="https://tse4.mm.bing.net/th?id=OIP.i0iz1VjijKJLVqdiibW7LAHaHa&pid=Api&P=0&h=180" class="icon" alt="Facebook Icon" />
+        <span>You can visit my Facebook here and other content that I post!</span>
+      </li>
+
+      <li>
+        <a href="https://www.youtube.com/@hyperlinkslinks9572?si=clgCpg06oi1uJ6DY">
+          <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351326.jpg" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\1742431351326.jpg" class="main" />
+        </a>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.7UW5i-mDVg0KXz2sWaOENgHaHa&pid=Api&P=0&h=180" class="icon" alt="YouTube Icon" />
+        <span>You can like and subscribe at my YouTube account here!</span>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; My Links. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

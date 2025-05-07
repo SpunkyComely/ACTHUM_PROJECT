@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Snake Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: url('https://cdn.wallpapersafari.com/15/28/Bu4YMp.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #f0f0f0;
+    }
+
+    header nav ul li a i {
+      margin-right: 5px;
+      margin-top: 0.5cm;
+      margin-bottom: 0.5cm;
+    }
+
+    .animal {
+      display: flex;
+      flex-direction: column;
+      border: 0.5cm solid #000000;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .animal-section {
+      margin-bottom: 60px;
+    }
+
+    .animal-section img {
+      max-width: 400px;
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    footer nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    footer nav ul li a:hover {
+      color: #aaa;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" alt="c:\Users\carol\OneDrive\Desktop\Schools and Stuff\ACTHUM1_ICA1_2025_files\Logo.png" style="border-radius: 50%; width: 200px; height: 200px;">
+    <h1>Animal Dictionary</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="Contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="Article.html"><i class="fas fa-book"></i> Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <br>
+    <div class="animal">
+        <div class="animal-content">
+            <div class="animal-section">
+            <img src="https://www.color-meanings.com/wp-content/uploads/2022/03/Tokay-Gecko-1.jpeg" 
+            alt="Gecko"onclick="enlargeImage(this)">
+            <h2>Gecko</h2>
+            <div id="gecko-details">
+            <p>
+                Geckos are small to medium-sized lizards found in a variety of environments around the world, from deserts to rainforests. 
+                They are known for their unique vocalizations, often producing chirps, clicks, or squeaks, which they use for communication or to establish territory. 
+                One of their most remarkable traits is their ability to climb smooth surfaces, thanks to specialized toe pads that allow them to adhere to walls and ceilings. 
+                Geckos are primarily insectivores, feeding on a wide range of insects like crickets, flies, and moths, though some species also consume fruit or nectar. 
+                
+                </p>
+                </div>
+            </div>
+<br><br><br>
+            <div class="animal-section">
+            <img src="https://thepetenthusiast.com/wp-content/uploads/2019/10/leopard-gecko-habitat-1-887x595.jpg" 
+            alt=""onclick="enlargeImage(this)">
+            <h3>Habitat</h3>
+                Geckos are highly adaptable and can be found in a wide range of habitats, from tropical rainforests to deserts and rocky cliffs. 
+                They tend to favor warm climates, often living in areas with temperatures ranging from mild to hot, 
+                where they can bask in the sun to regulate their body temperature. Many geckos are arboreal, meaning they live in trees or shrubs,
+                 while others prefer terrestrial habitats like grasslands, caves, or sandy dunes. 
+                 
+                </p>
+                </div>
+           <br><br><br><br>
+                <div class="animal-section">
+            <img src="https://a-z-animals.com/media/2021/11/shutterstock_1933453508.jpg"
+            alt="Diet" onclick="enlargeImage(this)"> 
+            <h3>Diet</h3>
+            <p>
+                Geckos are primarily insectivores, feeding on a variety of small insects such as crickets, flies, and moths. 
+                Some species may also consume other invertebrates like worms, spiders, and beetles, depending on availability. 
+                Larger geckos, such as the Tokay gecko, may even hunt small vertebrates like lizards or baby rodents. 
+                While most geckos rely heavily on animal-based foods for protein, some species, like the fruit-eating geckos, will occasionally consume fruit and nectar.
+                 
+                </p>
+            </div>
+            <br>
+            <div class="animal-section">
+            <img src="https://i0.wp.com/animalbehaviorcorner.com/wp-content/uploads/2022/11/Gecko-5-1.jpg?w=1748&ssl=1" 
+            alt="Social Behavior" onclick="enlargeImage(this)">
+            <h3>Social Behavior</h3>
+            <p>
+                Geckos are generally solitary creatures, with many species preferring to live alone, especially during the non-breeding seasons. 
+                They are territorial animals, with males often defending their space from other males through vocalizations or displays of aggression. 
+                During the breeding season, however, geckos become more social, with males calling to attract females using distinct chirps or clicks. 
+                Some species of geckos are known to live in loose groups, particularly if food is abundant and space is not a limiting factor.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<footer>
+    <p>&copy; 2025 Animal Dictionary. All rights reserved.</p>
+</footer>
+
+<script>
+    function enlargeImage(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
